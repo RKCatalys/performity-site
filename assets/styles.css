@@ -571,7 +571,19 @@ h1,h2,h3{overflow-wrap:break-word}
 .hero-banner .bub.p7{left:40%;bottom:-24px;animation-delay:2s;animation-duration:7.8s}
 .hero-banner .bub.p8{left:-40px;top:45%;animation-delay:.6s;animation-duration:6.9s}
 
-@media(max-width:960px){ .hero-banner .bub{display:none} }
+@media(max-width:960px){
+  /* keep the wide product pills hidden on phones (they would overlap) */
+  .hero-banner .bub-u{display:none}
+  /* show the compact metric bubbles, shrunk and tucked into the corners */
+  .hero-banner .bub-m{padding:7px 11px;border-radius:13px}
+  .hero-banner .bub-m .lab{font-size:9px}
+  .hero-banner .bub-m .val{font-size:14px}
+  .hero-banner .bub-m .dl{font-size:8.5px}
+  .hero-banner .bub.p1{left:6px;top:8px;right:auto;bottom:auto}
+  .hero-banner .bub.p2{right:6px;top:8px;left:auto;bottom:auto}
+  .hero-banner .bub.p3{right:6px;bottom:8px;left:auto;top:auto}
+  .hero-banner .bub.p4{left:6px;bottom:8px;right:auto;top:auto}
+}
 
 /* =========================================================================
    TUNING: calmer hero headline, integrations active/coming-soon, video modal
