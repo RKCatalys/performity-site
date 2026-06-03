@@ -572,17 +572,25 @@ h1,h2,h3{overflow-wrap:break-word}
 .hero-banner .bub.p8{left:-40px;top:45%;animation-delay:.6s;animation-duration:6.9s}
 
 @media(max-width:960px){
-  /* keep the wide product pills hidden on phones (they would overlap) */
-  .hero-banner .bub-u{display:none}
-  /* show the compact metric bubbles, shrunk and tucked into the corners */
-  .hero-banner .bub-m{padding:7px 11px;border-radius:13px}
-  .hero-banner .bub-m .lab{font-size:9px}
-  .hero-banner .bub-m .val{font-size:14px}
-  .hero-banner .bub-m .dl{font-size:8.5px}
+  /* compact metric bubbles tucked into the four corners */
+  .hero-banner .bub-m{padding:6px 10px;border-radius:12px}
+  .hero-banner .bub-m .lab{font-size:8.5px}
+  .hero-banner .bub-m .val{font-size:13px}
+  .hero-banner .bub-m .dl{font-size:8px}
   .hero-banner .bub.p1{left:6px;top:8px;right:auto;bottom:auto}
   .hero-banner .bub.p2{right:6px;top:8px;left:auto;bottom:auto}
   .hero-banner .bub.p3{right:6px;bottom:8px;left:auto;top:auto}
   .hero-banner .bub.p4{left:6px;bottom:8px;right:auto;top:auto}
+  /* product pills become small round icon bubbles on the edge midpoints */
+  .hero-banner .bub-u{padding:6px;border-radius:50%;min-width:0;max-width:none}
+  .hero-banner .bub-u::before{border-radius:50%}
+  .hero-banner .bub-u .tx{display:none}
+  .hero-banner .bub-u .ic{width:26px;height:26px}
+  .hero-banner .bub-u .ic svg{width:13px;height:13px}
+  .hero-banner .bub.p5{left:44%;top:6px;right:auto;bottom:auto}
+  .hero-banner .bub.p6{right:6px;top:41%;left:auto;bottom:auto}
+  .hero-banner .bub.p7{left:44%;bottom:6px;right:auto;top:auto}
+  .hero-banner .bub.p8{left:6px;top:41%;right:auto;bottom:auto}
 }
 
 /* =========================================================================
