@@ -619,3 +619,17 @@ h1,h2,h3{overflow-wrap:break-word}
 /* product-detail 2-up image gallery */
 .pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:760px){.pd-grid{grid-template-columns:1fr}}
+
+/* ---- mobile fix: ensure hero stacks (overrides later desktop grid tweak) ---- */
+@media(max-width:960px){
+  .hero-2{grid-template-columns:1fr !important;gap:26px}
+  .hero-2 .h-left{text-align:center}
+  .hero-2 .h-left .section-head{text-align:center}
+  .hero-2 .hero-cta,.hero-2 .hero-assur{justify-content:center}
+  .hero-banner{max-width:540px;margin:0 auto}
+  .hero-banner .ring{display:none}
+}
+
+/* global safety: never allow sideways scroll on mobile */
+html{overflow-x:hidden}
+img,video,svg{max-width:100%}
